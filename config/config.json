@@ -1,0 +1,14 @@
+{
+    "system": {
+        "port": 3000
+    },
+    "db": {
+        "mysql": {
+            "host":"localhost",
+            "dbname":"root",
+            "dbpwd":"123456",
+            "db": "music",
+            "port": 3306
+        }
+    }
+}

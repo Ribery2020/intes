@@ -1,0 +1,52 @@
+创建一个API来管理MySQL数据库中的歌曲列表
+
+歌曲具有：
+
+●全局唯一标识符GUID（字符串，必需，由应用程序生成）
+
+●类型（字符串，最多80个字符）
+
+●标题（字符串，最多80个字符，必需）
+
+●歌曲持续时间按秒计算（整数）
+
+●作者（字符串，最多100个字符，必需）
+
+Routes：
+
+[GET] /songs ，返回歌曲列表
+
+[GET] /songs/{guid}，返回一首歌
+
+[POST] /songs，添加歌曲
+
+[PUT] /songs/{guid}，编辑歌曲
+
+[GET] /songs/artists?q={artist}，返回给定作者的歌曲列表
+
+[GET] /artists,一份作者名单，里面有他创作的每首歌
+
+[
+	{
+		"name" : "Jean mimi",
+		"songs" : [
+			"title" : "lolilol",
+			"genre" : ""
+		]
+	}
+]
+
+内容要求：
+-设置基于express实现三层架构开发三层架构。
+
+-设置连接到“MySQL”数据库所需的配置。
+
+-创建提到的“歌曲”模板。
+
+-创建API。
+
+-为具有“body”的API添加数据验证层（Validators）。
+
+-确保API可以从Web应用程序访问（CORS问题）。
+
+-添加“单元测试”来测试“SongService”服务
